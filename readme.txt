@@ -1,0 +1,1 @@
+This repository will host the the CMSE course semester projects and further details would be updated here accordingly
