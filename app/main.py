@@ -24,9 +24,9 @@ def load_data():
     # Construct the Google Drive download URL
     url = f'https://drive.google.com/uc?id={file_id}'
 
-    # Use gdown to download the zip file to a BytesIO object
+    # Use gdown to download the file to a BytesIO object
     zip_bytes = io.BytesIO()
-    gdown.download(url, output=zip_bytes, quiet=False, return_format='bytes')  # Use return_format='bytes'
+    gdown.download(url, zip_bytes, quiet=False)
 
     # Ensure the BytesIO object's cursor is at the start
     zip_bytes.seek(0)
