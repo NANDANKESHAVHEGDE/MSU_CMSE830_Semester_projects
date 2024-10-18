@@ -22,3 +22,7 @@ The app uses a **balanced sample of 1 million rows** extracted from a larger rec
 ## Prerequisites
 
 Refer to requirements.txt file in the repository
+
+## The app is hosted in the below url:
+
+https://msucmse830semesterprojects-6f9j4vtb6tp5ziynhxeafp.streamlit.app/
