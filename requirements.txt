@@ -55,7 +55,7 @@ seaborn==0.13.2
 six==1.16.0
 smmap==5.0.1
 soupsieve==2.6
-streamlit==1.38.0
+streamlit==1.39.0
 sympy==1.13.3
 tenacity==8.5.0
 threadpoolctl==3.5.0
