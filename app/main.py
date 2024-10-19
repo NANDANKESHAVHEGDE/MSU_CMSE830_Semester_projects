@@ -4,6 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 import gdown
+import os
 import numpy as np
 import zipfile
 import io
@@ -121,7 +122,7 @@ def plot_visualizations():
 # --- Step 3: Load Trained Model --- 
 @st.cache_resource  # Using st.cache_resource for model caching
 def load_trained_model():
-    with open("./../Model_training/trained_cuisine_prediction_model.pkl", 'rb') as f:
+    with open(r"./../Model_training/trained_cuisine_prediction_model.pkl", 'rb') as f:
         model, le = pickle.load(f)
     return model, le
 
