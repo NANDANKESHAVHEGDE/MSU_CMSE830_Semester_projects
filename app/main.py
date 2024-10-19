@@ -17,8 +17,8 @@ st.set_page_config(page_title="Recipe Gen Predict Dashboard", layout="wide")
 # --- Step 1: Load Data and Preprocessing ---
 @st.cache_data(show_spinner=False, persist=False)
 def load_data():
-    file_id = "1MhU94QnZrfQV51cl6rIOY6Tvl7JJT53_"  # Replace with your actual Google Drive file ID
-
+    # file_id = "1MhU94QnZrfQV51cl6rIOY6Tvl7JJT53_" 
+    file_id = "10pHaICMuow9U7x_L0C7lFxS7zziB-jax" 
     url = f'https://drive.google.com/uc?id={file_id}'
     zip_bytes = io.BytesIO()
     gdown.download(url, zip_bytes, quiet=False)
@@ -122,7 +122,9 @@ def plot_visualizations():
 # --- Step 3: Load Trained Model --- 
 @st.cache_resource  # Using st.cache_resource for model caching
 def load_trained_model():
-    file_id = "1iG2Mp00Jhen6PWUUqb1x1NYAW5nZyGpF"  # Replace with your pre-trained model's Google Drive file ID
+    # file_id = "1iG2Mp00Jhen6PWUUqb1x1NYAW5nZyGpF"
+    file_id = "1ddXM_ie-xn6Cd56SAmhGbzTy4pDuhwPi"
+
     url = f'https://drive.google.com/uc?id={file_id}'
 
     model_bytes = io.BytesIO()
