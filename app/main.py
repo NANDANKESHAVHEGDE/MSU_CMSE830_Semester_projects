@@ -122,7 +122,14 @@ def plot_visualizations():
 # --- Step 3: Load Trained Model --- 
 @st.cache_resource  # Using st.cache_resource for model caching
 def load_trained_model():
-    with open(r"./../Model_training/trained_cuisine_prediction_model.pkl", 'rb') as f:
+    file_id = "1iG2Mp00Jhen6PWUUqb1x1NYAW5nZyGpF"  # Replace with your pre-trained model's Google Drive file ID
+    url = f'https://drive.google.com/uc?id={file_id}'
+
+    model_bytes = io.BytesIO()
+    gdown.download(url, model_bytes, quiet=False)
+    model_bytes.seek(0)
+
+    with model_bytes as f:
         model, le = pickle.load(f)
     return model, le
 
